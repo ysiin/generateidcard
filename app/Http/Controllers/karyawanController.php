@@ -152,6 +152,7 @@ class karyawanController extends Controller
         // Simpan ke dalam lokal
         file_put_contents($storagePath . $outputPath, $pdfContent);
 
+
         header('Content-Type: application/pdf');
         header('Content-Disposition: inline; filename="' . $outputPath . '"');
         echo $pdfContent ;
